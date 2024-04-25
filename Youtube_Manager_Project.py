@@ -1,4 +1,3 @@
-
 import json
 
 def load_data():
@@ -30,7 +29,7 @@ def addNewVideo(videos):
 def updateVideoDetails(videos):
     listAllVideos(videos)
     ind = int(input("Enter the index to update: "))
-    if 1 <= ind < len(videos):
+    if 1 <= ind <= len(videos):
        prevTime = videos[ind-1]['time']
        name = input("Enter video name: ")
        time = input("Enter video time: ")
@@ -46,7 +45,7 @@ def updateVideoDetails(videos):
 def deleteVideo(videos):
     listAllVideos(videos)
     ind = int(input("Enter the index to delete: "))
-    if 1 <= ind < len(videos):
+    if 1 <= ind <= len(videos):
        del videos[ind-1] 
        print("Successfully deleted..")
        dataSaveHelper(videos)
